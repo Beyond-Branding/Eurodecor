@@ -10,25 +10,30 @@ interface Props {
     <div class="row">
       <div class="col-md-12">
         <div class="de-flex sm-pt10">
-          <!-- Logo -->
+
+          <!-- Logo and Brand Name -->
           <div class="de-flex-col">
             <div id="logo">
-              <a href="/index.html">
+              <a href="/index.html" class="brand-logo-link">
                 <img
                   class="logo-main"
-                  src="/images/logo-white.webp"
-                  alt="Eurodecor"
+                  src="/images/logo1.png"
+                  alt="Drasti Surfaces"
                 />
                 <img
                   class="logo-scroll"
-                  src="/images/logo-white.webp"
-                  alt="Eurodecor"
+                  src="/images/logo1.png"
+                  alt="Drasti Surfaces"
                 />
                 <img
                   class="logo-mobile"
-                  src="/images/logo-white.webp"
-                  alt="Eurodecor"
+                  src="/images/logo1.png"
+                  alt="Drasti Surfaces"
                 />
+
+                <span class="brand-name">
+                  Drasti Surfaces
+                </span>
               </a>
             </div>
           </div>
@@ -116,6 +121,7 @@ interface Props {
           <!-- Right-side controls -->
           <div class="de-flex-col">
             <div class="menu_side_area">
+
               <!-- Mobile navigation toggle -->
               <span
                 id="menu-btn"
@@ -127,7 +133,7 @@ interface Props {
               ></span>
             </div>
 
-            <!-- Original desktop hamburger / information panel -->
+            <!-- Desktop hamburger / information panel -->
             <div
               id="btn-extra"
               role="button"
@@ -139,6 +145,7 @@ interface Props {
               <span></span>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -146,25 +153,85 @@ interface Props {
 </header>
 
 <style>
-  
-#mainmenu ul li a {
+  /* Logo and brand name alignment */
+  #logo .brand-logo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  /* Brand name */
+  #logo .brand-name {
+    display: inline-block;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    line-height: 1.2;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+
+  /* Scrolled header brand color */
+  header.smaller #logo .brand-name,
+  header.header-light #logo .brand-name {
+    color: #ffffff;
+  }
+
+  /* Catalogue dropdown */
+  #mainmenu ul li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-}
+  }
 
-.catalogue-download {
+  .catalogue-download {
     font-size: 13px;
     margin-left: auto;
     padding-left: 25px;
     opacity: 0.7;
     transition: all 0.3s ease;
-}
+  }
 
-#mainmenu ul li a:hover .catalogue-download {
+  #mainmenu ul li a:hover .catalogue-download {
     opacity: 1;
     transform: translateY(2px);
-}
+  }
 
+  /* Tablet responsiveness */
+  @media (max-width: 1199px) {
+    #logo .brand-name {
+      font-size: 18px;
+    }
+
+    #logo .brand-logo-link {
+      gap: 9px;
+    }
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 767px) {
+    #logo .brand-logo-link {
+      gap: 8px;
+    }
+
+    #logo .brand-name {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  /* Small mobile screens */
+  @media (max-width: 375px) {
+    #logo .brand-name {
+      font-size: 14px;
+    }
+
+    #logo .brand-logo-link {
+      gap: 6px;
+    }
+  }
 </style>
