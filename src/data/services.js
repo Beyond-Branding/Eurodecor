@@ -11,7 +11,7 @@ const services = [
     slug: "veneers",
     title: "",
     image:
-      "https://res.cloudinary.com/g81wchrp/image/upload/v1793707186/veneer.jpg_1.png",
+      "https://res.cloudinary.com/g81wchrp/image/upload/v1794988683/veneer_2.png",
     bannerImage: "https://res.cloudinary.com/g81wchrp/image/upload/v1793896654/0._Veneer_Banner.png",
     tags: ["Natural Wood", "Finishes"],
   },
