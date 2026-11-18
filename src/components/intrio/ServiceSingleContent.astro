@@ -74,13 +74,17 @@ if (!collection || !collections.some(item => item.slug === collection.slug)) {
 </section>
 
 <!-- WHAT'S INCLUDED -->
+<!-- WHAT'S INCLUDED -->
 <section class="bg-light">
   <div class="container">
     <div class="row g-4 justify-content-center">
-      <div class="col-lg-6">
+      <div class="col-12">
         <div class="text-center mb-5">
-          <div class="subtitle wow fadeInUp" data-wow-delay=".0s">What's Included</div>
-          <h2 class="wow fadeInUp" data-wow-delay=".2s">
+          <div class="subtitle wow fadeInUp" data-wow-delay=".0s">
+            What's Included
+          </div>
+
+          <h2 class="wow fadeInUp included-title" data-wow-delay=".2s">
             {`Explore the Possibilities of ${collection.title}`}
           </h2>
         </div>
@@ -172,20 +176,22 @@ if (!collection || !collections.some(item => item.slug === collection.slug)) {
 </section>
 
 <!-- OUR PROCESS -->
-<!-- OUR PROCESS -->
 <section class="bg-dark-1 text-light">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-6 offset-lg-3 text-center">
-        <div class="text-center">
-          <div class="subtitle wow fadeInUp" data-wow-delay=".0s">Our Process</div>
-          <h2 class="wow fadeInUp" data-wow-delay=".2s">
-            {`From Inspiration to ${collection.title} Application`}
-          </h2>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 text-center">
+
+        <div class="subtitle wow fadeInUp" data-wow-delay=".0s">
+          Our Process
         </div>
+
+        <h2 class="wow fadeInUp process-title" data-wow-delay=".2s">
+          {`From Inspiration to ${collection.title} Application`}
+        </h2>
+
       </div>
     </div>
-
     <div class="row justify-content-center">
 
       <div class="col-6 col-md-3 de-step wow fadeInRight" data-wow-delay=".4s">
@@ -320,5 +326,15 @@ if (!collection || !collections.some(item => item.slug === collection.slug)) {
 
   .de-step .step-icon i {
   color: #c9a987;
+}
+.included-heading h2 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  .included-heading h2 {
+    white-space: normal;
+  }
 }
 </style>
